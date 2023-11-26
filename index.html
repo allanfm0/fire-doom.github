@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOM Fire Effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>DOOM Fire Effect</h1>
+        <p><a
+                href="https://github.com/filipedeschamps/doom-fire-algorithm"></a>https://github.com/filipedeschamps/doom-fire-algorithm
+        </p>
+    </header>
+
+    <section>
+        <div id="fireCanvas"></div>
+    </section>
+
+    <section id="controlsContainer">
+        <div id="controlBoxes">
+            <div class="controls" id="windEffect">
+                <h3>Wind Effect</h3>
+                <button id="leftWind" onclick="chageWindDirection(0)">To the left</button>
+                <button id="noWind" onclick="changeWindDirection(1)">No wind</button>
+                <button id="rightWind" onclick="changeWindDirection(2)">To the right</button>
+            </div>
+
+            <div class="controls" id="changeColor">
+                <h3>Change Fire Colors</h3>
+                <input type="range" name="hueInput" id="hueInput" value="0" min="0" max="360">
+            </div>
+
+            <div class="controls" id="fireControl">
+                <h3>Fire Control</h3>
+                <button onclick="destroyFireSource()">Min Fire</button>
+                <button onclick="createFireSource()">Max Fire</button>
+                <button onclick="decreaseFireSource()">-</button>
+                <button onclick="increaseFireSource()">+</button>
+            </div>
+        </div>
+        <button id="debug" onclick="toggleDebugMode()">Toggle Debug Mode</button>
+    </section>
+    <script src="fire.js"></script>
+</body>
+
+</html>
